@@ -1,6 +1,6 @@
 # Docs to Markdown
 
-A TypeScript version of the DocsToMarkdown - a tool for automatically analyzing and summarizing library documentation for AI coding assistants.
+ DocsToMarkdown - a tool for automatically analyzing and summarizing library documentation for LLM's.
 
 This tool scrapes library documentation, extracts key information, and generates concise, LLM-friendly coding references that can be used by AI assistants like Claude to provide better coding help.
 
