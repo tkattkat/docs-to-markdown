@@ -1,7 +1,7 @@
 {
-  "name": "fast-library-doc-analyzer-ts",
+  "name": "docs-to-markdown",
   "version": "1.0.0",
-  "description": "Tool for automatically analyzing and summarizing library documentation (TypeScript version)",
+  "description": "Tool for automatically analyzing and summarizing library documentation for use with LLM's",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

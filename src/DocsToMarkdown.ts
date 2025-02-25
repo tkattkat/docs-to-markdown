@@ -115,9 +115,9 @@ export class DocsToMarkdown {
     };
 
     try {
-      console.log(`🚀 Fast analysis of ${libraryName} documentation...`);
-      console.log(`🔍 Token limits: ${this.options.maxTokensPerPage} per page, ${this.options.maxTotalTokens} total`);
-      console.log(`🔤 Single language/version: ${singleLanguageVersion ? 'Yes' : 'No'}`);
+      console.log(`Analyzing ${libraryName} documentation...`);
+      console.log(`Token limits: ${this.options.maxTokensPerPage} per page, ${this.options.maxTotalTokens} total`);
+      console.log(`Single language/version: ${singleLanguageVersion ? 'Yes' : 'No'}`);
 
       const safeLibraryName = libraryName.toLowerCase().replace(/[^a-z0-9]/g, '-');
       const libraryDir = path.join(this.options.outputDir!, safeLibraryName);
@@ -170,15 +170,15 @@ export class DocsToMarkdown {
         }
 
         if (this.tokenCount.total > this.options.maxTotalTokens! * 0.9) {
-          console.log(`🛑 Approaching token limit (${this.tokenCount.total} / ${this.options.maxTotalTokens}). Stopping crawl.`);
+          console.log(`Approaching token limit (${this.tokenCount.total} / ${this.options.maxTotalTokens}). Stopping crawl.`);
           urlsToVisit = [];
         }
       }
 
-      console.log(`📏 Checking page sizes and summarizing large content...`);
+      console.log(`Checking page sizes and summarizing large content...`);
       const processedPages = await this.summarizeExcessivePages(scrapedPages);
 
-      console.log(`📝 Generating coding reference for ${libraryName}...`);
+      console.log(`Generating coding reference for ${libraryName}...`);
 
       let pagesToSummarize = processedPages;
       if (focusOnAPI) {
