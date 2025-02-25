@@ -4,7 +4,6 @@
 
 ### Features
 
-- Converted the FastLibraryDocAnalyzer from JavaScript to TypeScript
 - Created a modular architecture with properly typed interfaces
 - Implemented utility classes for various functionality:
   - `HtmlCompressor`: Optimizes HTML content for processing

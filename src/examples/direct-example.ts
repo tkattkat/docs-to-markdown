@@ -32,7 +32,7 @@ async function runExample() {
   }
 }
 
-console.log('FastLibraryDocAnalyzer Example');
+console.log('DocsToMarkdown Example');
 console.log('==============================');
 
 runExample().then(() => {

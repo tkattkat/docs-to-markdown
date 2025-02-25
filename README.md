@@ -1,6 +1,6 @@
 # Fast Library Doc Analyzer (TypeScript)
 
-A TypeScript version of the FastLibraryDocAnalyzer - a tool for automatically analyzing and summarizing library documentation for AI coding assistants.
+A TypeScript version of the DocsToMarkdown - a tool for automatically analyzing and summarizing library documentation for AI coding assistants.
 
 This tool scrapes library documentation, extracts key information, and generates concise, LLM-friendly coding references that can be used by AI assistants like Claude to provide better coding help.
 
@@ -18,13 +18,13 @@ This tool scrapes library documentation, extracts key information, and generates
 
 ```bash
 # Using pnpm (recommended)
-pnpm install fast-library-doc-analyzer-ts
+pnpm install docs-to-markdown
 
 # Using npm
-npm install fast-library-doc-analyzer-ts
+npm install docs-to-markdown
 
 # Using yarn
-yarn add fast-library-doc-analyzer-ts
+yarn add docs-to-markdown
 ```
 
 ## Requirements
@@ -43,7 +43,7 @@ ANTHROPIC_API_KEY=your_api_key_here
 2. Analyze a library from its documentation URL:
 
 ```typescript
-import { analyzeUrl } from 'fast-library-doc-analyzer-ts';
+import { analyzeUrl } from 'docs-to-markdown';
 
 async function main() {
   const result = await analyzeUrl('https://reactjs.org/docs/getting-started.html', {
@@ -66,7 +66,7 @@ The package includes a command-line interface for quick analysis:
 
 ```bash
 # Install globally
-pnpm install -g fast-library-doc-analyzer-ts
+pnpm install -g docs-to-markdown
 
 # Run analysis on a library
 analyze-url https://reactjs.org/docs/getting-started.html --pages=5
@@ -76,7 +76,7 @@ analyze-url https://reactjs.org/docs/getting-started.html --pages=5
 
 The module is organized into several components:
 
-- **FastLibraryDocAnalyzer**: Main class that orchestrates the analysis process
+- **DocsToMarkdown**: Main class that orchestrates the analysis process
 - **HtmlCompressor**: Optimizes HTML content for processing
 - **Utilities**:
   - **CacheManager**: Manages caching of scraped pages and summaries
@@ -88,13 +88,13 @@ The module is organized into several components:
 
 ## Advanced Usage
 
-For more control, you can use the `FastLibraryDocAnalyzer` class directly:
+For more control, you can use the `DocsToMarkdown` class directly:
 
 ```typescript
-import { FastLibraryDocAnalyzer } from 'fast-library-doc-analyzer-ts';
+import { DocsToMarkdown } from 'docs-to-markdown';
 
 // Create analyzer with custom options
-const analyzer = new FastLibraryDocAnalyzer({
+const analyzer = new DocsToMarkdown({
   apiKey: 'your_anthropic_api_key',
   model: 'claude-3-7-sonnet-latest',
   outputDir: './custom-output-dir',
