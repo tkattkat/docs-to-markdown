@@ -1,4 +1,4 @@
-# Fast Library Doc Analyzer (TypeScript)
+# Docs to Markdown
 
 A TypeScript version of the DocsToMarkdown - a tool for automatically analyzing and summarizing library documentation for AI coding assistants.
 
